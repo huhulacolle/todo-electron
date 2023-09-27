@@ -1,2 +1,2 @@
-const $el = document.createElement("todo-manager")
+const $el = document.createElement("todo-manager");
 document.body.appendChild($el);

@@ -1,28 +1,29 @@
-const {app , BrowserWindow} = require("electron"); // CommonJS
+const { app, BrowserWindow } = require("electron"); // CommonJS
+const ElectronStore = require("electron-store");
+ElectronStore.initRenderer();
 
-function createWindow(){
-    const win = new BrowserWindow({
-        width: 1000,
-        height: 600,
-        webPreferences:{
-            nodeIntegration: true,
-            contextIsolation: false
-        }
-    });
+console.log(app.getPath('userData'));
 
-    win.loadFile('src/template/index.html')
+function createWindow() {
+  const win = new BrowserWindow({
+    width: 1000,
+    height: 600,
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false,
+    },
+  });
 
-    win.webContents.openDevTools()
+  win.loadFile("src/template/index.html");
+
+  win.webContents.openDevTools();
 }
 
-app.whenReady().then(createWindow)
-app.on("window-all-closed",() => {
-    app.quit()
-})
-
-
-
+app.whenReady().then(createWindow);
+app.on("window-all-closed", () => {
+  app.quit();
+});
 
 // Vanilla ?
 // Custom-Element
-// ShadowDOM 
+// ShadowDOM
