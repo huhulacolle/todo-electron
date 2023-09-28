@@ -38,3 +38,5 @@ class TodoTask extends HTMLElement{
 }
 
 customElements.define("todo-task", TodoTask)
+
+module.exports = TodoTask;

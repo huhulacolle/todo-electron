@@ -26,3 +26,5 @@ class TodoManager extends HTMLElement{
 }
 
 customElements.define("todo-manager", TodoManager)
+
+module.exports = TodoManager;

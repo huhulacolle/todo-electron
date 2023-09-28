@@ -38,3 +38,5 @@ class TodoInput extends HTMLElement{
 }
 
 customElements.define("todo-input", TodoInput)
+
+module.exports = TodoInput;
