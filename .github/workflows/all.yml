@@ -12,8 +12,6 @@ on:
       - '!main'
       - '!develop'
 
-
-        
 jobs:
     tests:
         name: Tests Unitaires
@@ -27,7 +25,7 @@ jobs:
             - name: Installation de Node.js
               uses: actions/setup-node@v3
 
-            - name: Installation de Node.js
+            - name: Installation des packages
               run: npm install
               
             - name: Test unitaire
