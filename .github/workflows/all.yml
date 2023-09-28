@@ -35,6 +35,9 @@ jobs:
               uses: peter-evans/create-pull-request@v5
               with:
                 token: ${{ secrets.GITHUB_TOKEN }}
-                branch: develop
-                
+                title: "Nouvelles modifications sur ${GITHUB_REF##*/}"
+                body: "Veuillez examiner les changements sur la branche ${GITHUB_REF##*/}."
+                base: "release"
+                branch: "${GITHUB_REF##*/}"
+
           
