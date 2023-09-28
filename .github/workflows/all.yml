@@ -1,10 +1,17 @@
 name: All
 
 on:
-    push: 
-        branches: '*'
-    pull_request: 
-        branches: '*'
+  push:
+    branches:
+      - '*'
+      - '!main'
+      - '!develop'
+  pull_request:
+    branches:
+      - '*'
+      - '!main'
+      - '!develop'
+
 
         
 jobs:
@@ -28,4 +35,7 @@ jobs:
             
             - name: Create Pull Request
               uses: peter-evans/create-pull-request@v5
+              with:
+                token: ${{ secrets.GITHUB_TOKEN }}
+                branch: develop
           
