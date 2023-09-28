@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node_modules/electron/cli.js .",
     "tests-fonctionnels": "node tests/fonctionnel.js",
-    "tests-unitaires": "mocha -r jsdom-global/register tests/unitaire.js"
+    "tests-unitaires": "./node_modules/jest/bin/jest.js "
   },
   "author": "",
   "license": "ISC",
